@@ -1,0 +1,104 @@
+{
+    "editor.fontFamily": "JetBrains Mono, 'Courier New', monospace",
+    "editor.cursorBlinking": "phase",
+    "editor.cursorStyle": "block",
+    "editor.minimap.enabled": false,
+    "workbench.startupEditor": "none",
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.settings.applyToAllProfiles": [
+
+    ],
+    "editor.fontLigatures": true,
+    "workbench.sideBar.location": "right",
+    "hediet.vscode-drawio.resizeImages": null,
+    "vim.useCtrlKeys": true,
+    "vim.useSystemClipboard": true,
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.hlsearch": true,
+    "vim.leader": "<Space>",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["k", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+    // Stay in visual mode while indenting
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    // Move selected lines while staying in visual mode
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    // toggle comment selection
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+       { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+        { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },  // NAVIGATION
+        // switch b/w buffers
+        { "before": ["<S-h>"], "commands": [":bprevious"] },
+        { "before": ["<S-l>"], "commands": [":bnext"] },
+
+        // splits
+        { "before": ["leader", "v"], "commands": [":vsplit"] },
+        { "before": ["leader", "s"], "commands": [":split"] },
+
+        // panes
+        {
+        "before": ["leader", "h"],
+        "commands": ["workbench.action.focusLeftGroup"]
+        },
+        {
+        "before": ["leader", "j"],
+        "commands": ["workbench.action.focusBelowGroup"]
+        },
+        { 
+        "before": ["leader", "k"],
+        "commands": ["workbench.action.focusAboveGroup"]
+        },
+        {
+        "before": ["leader", "l"],
+        "commands": ["workbench.action.focusRightGroup"]
+        },
+        {
+        "before": ["[", "d"],
+        "commands": ["editor.action.marker.prev"]
+        },
+        {
+        "before": ["]", "d"],
+        "commands": ["editor.action.marker.next"]
+        },
+        {
+        "before": ["g", "h"],
+        "commands": ["editor.action.showDefinitionPreviewHover"]
+        },
+        // NICE TO HAVE
+        { "before": ["leader", "w"], "commands": [":w!"] },
+        { "before": ["leader", "q"], "commands": [":q!"] },
+        { "before": ["leader", "x"], "commands": [":x!"] },
+        { "before": ["leader", "n"], "commands": [":noh"] },
+        // disable highlighting
+        {
+            "before": ["<C-n>"],
+            "commands": [":nohl"]
+        }
+
+
+   ],
+    "editor.tabCompletion": "on",
+    "editor.indentSize": "tabSize",
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingComments": "never",
+    "editor.autoClosingQuotes": "never",
+    "extensions.autoCheckUpdates": false,
+    "workbench.editor.autoLockGroups": {
+        "default": true
+    },
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "vim.normalModeKeyBindings": [],
+    "workbench.editorAssociations": {
+        "*.vsix": "default"
+    },
+    "git.suggestSmartCommit": false
+}
